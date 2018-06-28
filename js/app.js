@@ -39,6 +39,7 @@ var Player = function(x, y) {
   this.sprite = 'images/char-boy.png';
 };
 
+ //applause will be played when the game is won
 Player.prototype.win = function() {
   var snd = new Audio('sounds/applause.wav');
   snd.play();
@@ -48,7 +49,7 @@ Player.prototype.win = function() {
     that.x = 200;
   }, 3000);
 };
-
+//clash sound when the colliasion happens
 Player.prototype.crash = function() {
   var snd = new Audio('sounds/crash.wav');
   snd.play();
@@ -70,7 +71,7 @@ Player.prototype.update = function(dt) {
     }
   }
 };
-
+ //set control keys for the game
 Player.prototype.handleInput = function(key) {
   // tbd
   switch (key) {
